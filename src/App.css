@@ -5,16 +5,18 @@
   --text: rgba(102, 102, 102, 1);
   --text-hover: #000;
   --ident: 30px;
-  --left: calc(-1 * var(--ident));
+  --right: calc(-1 * var(--ident));
   --first: #DDF3FE;
   --second: #DDEBC8;
   --third: #FEFCD5;
+  --fourth: #fee3d5 ;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 body {
@@ -24,13 +26,13 @@ body {
 }
 
 ol {
-  margin-left: var(--ident);
+  margin-right: var(--ident);
   counter-reset: item;
 }
 
 .wtree li {
   list-style-type: none;
-  margin: 10px 0 10px 10px;
+  margin: 10px 10px 10px 0 ;
   position: relative;
 }
 
@@ -39,8 +41,8 @@ ol {
   counter-increment: item;
   position: absolute;
   top: -10px;
-  left: var(--left);
-  border-left: 1px solid var(--border);
+  right: var(--right);
+  border-right: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   width: var(--ident);
   height: 15px;
@@ -50,8 +52,8 @@ ol {
   position: absolute;
   content: '';
   top: 5px;
-  left: var(--left);
-  border-left: 1px solid var(--border);
+  right: var(--right);
+  border-right: 1px solid var(--border);
   border-top: 1px solid var(--border);
   width: var(--ident);
   height: 100%;
@@ -105,31 +107,11 @@ li li li span {
   background-color: var(--third);
 }
 
+li li li li span {
+  background-color: var(--fourth);
+}
 
 .display {
   margin-right: 12px;
   font-weight: bold;
-}
-
-input,
-label {
-  margin: 12px 0 20px 0;
-}
-
-label {
-  padding-left: 6px;
-  padding-right: 12px;
-}
-
-
-#radio-1:checked+label~ol li ol li {
-  display: none;
-}
-
-#radio-2:checked+label~ol li ol li ol li {
-  display: none;
-}
-
-#radio-3:checked+label~li ol li ol li {
-  display: none;
 }
