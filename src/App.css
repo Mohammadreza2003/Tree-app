@@ -9,7 +9,7 @@
   --first: #DDF3FE;
   --second: #DDEBC8;
   --third: #FEFCD5;
-  --fourth: #fee3d5 ;
+  --fourth: #fee3d5;
 }
 
 * {
@@ -32,7 +32,7 @@ ol {
 
 .wtree li {
   list-style-type: none;
-  margin: 10px 10px 10px 0 ;
+  margin: 10px 10px 10px 0;
   position: relative;
 }
 

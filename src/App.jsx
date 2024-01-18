@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { data } from "./data";
 
-const TreeDiagram = () => {
+const App = () => {
   const [visibleNodes, setVisibleNodes] = useState([]);
 
   const toggleNodeVisibility = (nodeId) => {
@@ -41,7 +41,7 @@ const TreeDiagram = () => {
 
   return (
     <div className="p-8">
-      <h1 className="title">Tree Diagram</h1>
+      <h1 className="title">درختواره کسب و کار</h1>
       <ol className="wtree">
         {treeData.map((node) => (
           <TreeNode key={node.id} node={node} />
@@ -51,4 +51,4 @@ const TreeDiagram = () => {
   );
 };
 
-export default TreeDiagram;
+export default App;
